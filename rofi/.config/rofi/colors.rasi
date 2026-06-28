@@ -1,9 +1,9 @@
 * {
-    bg: #0f1511;
-    fg: #dfe4dd;
-    accent: #94d5a9;
-    select-bg: #374b3d;
-    select-fg: #d1e8d5;
-    border-col: #8a938b;
+    bg: #0e1514;
+    fg: #dde4e2;
+    accent: #80d5cf;
+    select-bg: #324b49;
+    select-fg: #cce8e5;
+    border-col: #889391;
 }
 

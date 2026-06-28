@@ -1,9 +1,9 @@
 /* ~/.config/matugen/templates/swaync.css */
 
-@define-color background #0f1511;
-@define-color text #dfe4dd;
-@define-color match #94d5a9;
-@define-color border_color #8a938b;
+@define-color background #0e1514;
+@define-color text #dde4e2;
+@define-color match #80d5cf;
+@define-color border_color #889391;
 
 * {
     font-family: "JetBrains Mono Nerd Font";
