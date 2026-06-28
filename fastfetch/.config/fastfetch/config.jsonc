@@ -5,7 +5,7 @@
         "padding": { "top": 1 }
     },
     "display": {
-        "separator": " ", // Уменьшил сепаратор до одного пробела
+        "separator": " ",
         "color": {
             "keys": "cyan", 
             "output": "white"
@@ -44,8 +44,8 @@
             "format": "{pretty-name>27} │"
         },
         {
-            "type": "localip",
-            "key": "│ 󰩟  IP",
+            "type": "wm",
+            "key": "│ 󰍹  wm",
             "format": "{1>31} │"
         },
         {
