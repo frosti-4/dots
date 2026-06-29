@@ -71,7 +71,7 @@ caps_lock = false          # caps lock state on startup
 tap_to_click = true         # enable tap-to-click
 natural_scroll = true       # reverse scroll direction (content follows fingers)
 tap_and_drag = true         # double-tap-hold to drag
-accel_speed = 0.0           # pointer acceleration (-1.0 to 1.0)
+accel_speed = 0.2           # pointer acceleration (-1.0 to 1.0)
 accel_profile = "adaptive"  # "flat" or "adaptive"
 click_method = "none"       # none = device default; clickfinger = finger count (1=left, 2=right, 3=middle); button_areas = position on trackpad
 disable_while_typing = true  # ignore trackpad input shortly after a key press (palm rejection)
@@ -270,7 +270,7 @@ type = "none"  # render no built-in background (path ignored), so a
 "mod+f" = "fit-window"
 "mod+shift+m" = "fit-window-snapped"
 "mod+p" = "toggle-pin-to-screen"
-"mod+c" = "center-window"
+"mod+z" = "center-window"
 "mod+x" = "focus-center"
 "mod+a" = "home-toggle"
 
@@ -297,7 +297,7 @@ type = "none"  # render no built-in background (path ignored), so a
 "mod+equal" = "zoom-in"
 "mod+minus" = "zoom-out"
 "mod+0" = "zoom-reset"
-"mod+z" = "zoom-reset"
+"mod+c" = "zoom-reset"
 "mod+tab" = "zoom-to-fit"
 "mod+shift+w" = "zoom-to-fit-snapped"
 "mod+1" = "go-to -1750 1750"     # top-left bookmark
@@ -333,6 +333,7 @@ type = "none"  # render no built-in background (path ignored), so a
 "mod+escape" = "exec ~/.config/rofi/powermenu.sh"
 "mod+shift+y" = "exec ~/.config/rofi/wallpaper-picker.sh"
 "mod+n" = "exec swaync-client -t"
+"mod+shift+n" = "exec obsidian --disable-gpu"
 
 # # Example: built-in window capture (isolated window + shadow) to clipboard
 # # "ctrl+Print" = "spawn driftwm msg screenshot window -o - | wl-copy"
@@ -344,7 +345,7 @@ type = "none"  # render no built-in background (path ignored), so a
 # # invisible resize border (SSD frame or CSD margin). Set false to make that
 # # border inert — resize only through explicit bindings (e.g. alt+right) or
 # # gestures.
-# resize_on_border = true
+resize_on_border = false
 
 # # When true, resizing a window by dragging its edge (SSD or CSD border)
 # # propagates to every window connected to it via snap adjacency.
@@ -389,10 +390,10 @@ type = "none"  # render no built-in background (path ignored), so a
 # "wheel-scroll" = "zoom"            # mouse wheel on empty canvas → zoom
 
 [mouse.anywhere]
-# "mod+left" = "pan-viewport"
-# "mod+ctrl+left" = "center-nearest" # direction from drag delta
-# "mod+trackpad-scroll" = "pan-viewport"
-# "mod+wheel-scroll" = "zoom"
+"mod+left" = "pan-viewport"
+"mod+ctrl+left" = "center-nearest" # direction from drag delta
+"mod+trackpad-scroll" = "pan-viewport"
+"mod+wheel-scroll" = "zoom"
 
 [gestures]
 # # Gesture thresholds — tune for your touchpad size.
@@ -431,20 +432,20 @@ type = "none"  # render no built-in background (path ignored), so a
 # "2-finger-pinch" = "zoom"
 
 [gestures.anywhere]
-# "3-finger-swipe" = "pan-viewport"         # continuous (per-frame dx/dy)
-# "4-finger-swipe" = "center-nearest"       # threshold (accumulate, detect direction, fire once)
-# "mod+3-finger-swipe" = "center-nearest"   # mod makes 3-finger swipe navigate too
-# # Example: per-direction overrides (threshold only, checked before swipe fallback)
-# # "4-finger-swipe-up" = "exec brightnessctl set +5%"
-# # "4-finger-swipe-down" = "exec brightnessctl set 5%-"
-# "mod+2-finger-pinch" = "zoom"             # mod overrides app forwarding
-# "3-finger-pinch" = "zoom"                 # continuous
-# "4-finger-pinch-in" = "zoom-to-fit"       # threshold
-# "mod+4-finger-pinch-in" = "zoom-to-fit-snapped"
-# "4-finger-pinch-out" = "home-toggle"      # threshold
-# "mod+3-finger-pinch-in" = "zoom-to-fit"
-# "mod+3-finger-pinch-out" = "home-toggle"
-# "4-finger-hold" = "center-window"         # fires on release
+"3-finger-swipe" = "pan-viewport"         # continuous (per-frame dx/dy)
+"4-finger-swipe" = "center-nearest"       # threshold (accumulate, detect direction, fire once)
+"mod+3-finger-swipe" = "center-nearest"   # mod makes 3-finger swipe navigate too
+# Example: per-direction overrides (threshold only, checked before swipe fallback)
+"4-finger-swipe-up" = "exec brightnessctl set +5%"
+"4-finger-swipe-down" = "exec brightnessctl set 5%-"
+"mod+2-finger-pinch" = "zoom"             # mod overrides app forwarding
+"3-finger-pinch" = "zoom"                 # continuous
+"4-finger-pinch-in" = "zoom-to-fit"       # threshold
+"mod+4-finger-pinch-in" = "zoom-to-fit-snapped"
+"4-finger-pinch-out" = "home-toggle"      # threshold
+"mod+3-finger-pinch-in" = "zoom-to-fit"
+"mod+3-finger-pinch-out" = "home-toggle"
+"4-finger-hold" = "center-window"         # fires on release
 # "mod+3-finger-hold" = "center-window"
 
 [xwayland]
