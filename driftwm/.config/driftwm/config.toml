@@ -297,7 +297,6 @@ type = "none"  # render no built-in background (path ignored), so a
 "mod+equal" = "zoom-in"
 "mod+minus" = "zoom-out"
 "mod+0" = "zoom-reset"
-"mod+c" = "zoom-reset"
 "mod+tab" = "zoom-to-fit"
 "mod+shift+w" = "zoom-to-fit-snapped"
 "mod+1" = "go-to -1750 1750"     # top-left bookmark
@@ -334,6 +333,8 @@ type = "none"  # render no built-in background (path ignored), so a
 "mod+shift+y" = "exec ~/.config/rofi/wallpaper-picker.sh"
 "mod+n" = "exec swaync-client -t"
 "mod+shift+n" = "exec obsidian --disable-gpu"
+"mod+c" = "exec kitty - e cmus"
+"ctrl+alt+delete" = "exec kitty -e btop"
 
 # # Example: built-in window capture (isolated window + shadow) to clipboard
 # # "ctrl+Print" = "spawn driftwm msg screenshot window -o - | wl-copy"
